@@ -1,0 +1,90 @@
+nohup: ignoring input
+========================================================================================
+FIXED-TARGET TRANSPORT + MATCHED-NORM RANDOM CONTROL
+========================================================================================
+Models          : ['Llama-3.1-8B']
+Patch override  : [4, 8, 12, 16, 20, 24, 28, 30]
+Target layers   : 4,8,12,16,20,24,28,30,final
+Eval tokens     : 8,192
+Top-k           : 64
+Random repeats  : 1
+Device          : cuda
+Output dir      : ./final_ops_transport
+========================================================================================
+
+🚀 STARTING FIXED-TARGET TRANSPORT CONTROLS: Llama-3.1-8B
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 4/4 [00:00<00:00, 80.70it/s]
+WARNING:root:With reduced precision, it is advised to use `from_pretrained_no_processing` instead of `from_pretrained`.
+WARNING:root:You are not using LayerNorm, so the writing weights can't be centered! Skipping
+Loaded pretrained model meta-llama/Meta-Llama-3-8B into HookedTransformer
+Patch layers: [4, 8, 12, 16, 20, 24, 28, 30]
+Target layers: [4, 8, 12, 16, 20, 24, 28, 30, 'final']
+Random repeats: 1
+Cached 16 batches (8,192 tokens).
+Eval Llama-3.1-8B:   0%|          | 0/128 [00:00<?, ?it/s]Loading SAE for patch layer 4...
+
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s][AFetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 23967.45it/s]
+WARNING:simple_parsing.helpers.serialization.serializable:Dropping extra args {'signed': False}
+Patch hook: blocks.4.hook_resid_post; valid targets: [4, 8, 12, 16, 20, 24, 28, 30, 'final']
+Eval Llama-3.1-8B:   1%|          | 1/128 [00:04<10:12,  4.83s/it]Eval Llama-3.1-8B:   2%|▏         | 2/128 [00:05<04:38,  2.21s/it]Eval Llama-3.1-8B:   2%|▏         | 3/128 [00:05<02:50,  1.37s/it]Eval Llama-3.1-8B:   3%|▎         | 4/128 [00:05<02:00,  1.03it/s]Eval Llama-3.1-8B:   4%|▍         | 5/128 [00:06<01:32,  1.32it/s]Eval Llama-3.1-8B:   5%|▍         | 6/128 [00:06<01:16,  1.60it/s]Eval Llama-3.1-8B:   5%|▌         | 7/128 [00:07<01:05,  1.85it/s]Eval Llama-3.1-8B:   6%|▋         | 8/128 [00:07<00:58,  2.05it/s]Eval Llama-3.1-8B:   7%|▋         | 9/128 [00:07<00:53,  2.22it/s]Eval Llama-3.1-8B:   8%|▊         | 10/128 [00:08<00:50,  2.35it/s]Eval Llama-3.1-8B:   9%|▊         | 11/128 [00:08<00:47,  2.46it/s]Eval Llama-3.1-8B:   9%|▉         | 12/128 [00:08<00:45,  2.52it/s]Eval Llama-3.1-8B:  10%|█         | 13/128 [00:09<00:44,  2.57it/s]Eval Llama-3.1-8B:  11%|█         | 14/128 [00:09<00:43,  2.61it/s]Eval Llama-3.1-8B:  12%|█▏        | 15/128 [00:10<00:42,  2.64it/s]Eval Llama-3.1-8B:  12%|█▎        | 16/128 [00:10<00:42,  2.66it/s]Loading SAE for patch layer 8...
+
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s][AFetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 31184.42it/s]
+WARNING:simple_parsing.helpers.serialization.serializable:Dropping extra args {'signed': False}
+Patch hook: blocks.8.hook_resid_post; valid targets: [8, 12, 16, 20, 24, 28, 30, 'final']
+Eval Llama-3.1-8B:  13%|█▎        | 17/128 [00:15<03:05,  1.67s/it]Eval Llama-3.1-8B:  14%|█▍        | 18/128 [00:15<02:20,  1.28s/it]Eval Llama-3.1-8B:  15%|█▍        | 19/128 [00:15<01:48,  1.00it/s]Eval Llama-3.1-8B:  16%|█▌        | 20/128 [00:16<01:26,  1.24it/s]Eval Llama-3.1-8B:  16%|█▋        | 21/128 [00:16<01:11,  1.49it/s]Eval Llama-3.1-8B:  17%|█▋        | 22/128 [00:16<01:00,  1.74it/s]Eval Llama-3.1-8B:  18%|█▊        | 23/128 [00:17<00:53,  1.97it/s]Eval Llama-3.1-8B:  19%|█▉        | 24/128 [00:17<00:47,  2.17it/s]Eval Llama-3.1-8B:  20%|█▉        | 25/128 [00:17<00:44,  2.33it/s]Eval Llama-3.1-8B:  20%|██        | 26/128 [00:18<00:41,  2.46it/s]Eval Llama-3.1-8B:  21%|██        | 27/128 [00:18<00:39,  2.56it/s]Eval Llama-3.1-8B:  22%|██▏       | 28/128 [00:18<00:37,  2.64it/s]Eval Llama-3.1-8B:  23%|██▎       | 29/128 [00:19<00:36,  2.70it/s]Eval Llama-3.1-8B:  23%|██▎       | 30/128 [00:19<00:36,  2.72it/s]Eval Llama-3.1-8B:  24%|██▍       | 31/128 [00:20<00:35,  2.75it/s]Eval Llama-3.1-8B:  25%|██▌       | 32/128 [00:20<00:34,  2.78it/s]Loading SAE for patch layer 12...
+
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s][AFetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 28630.06it/s]
+WARNING:simple_parsing.helpers.serialization.serializable:Dropping extra args {'signed': False}
+Patch hook: blocks.12.hook_resid_post; valid targets: [12, 16, 20, 24, 28, 30, 'final']
+Eval Llama-3.1-8B:  26%|██▌       | 33/128 [00:25<02:36,  1.65s/it]Eval Llama-3.1-8B:  27%|██▋       | 34/128 [00:25<01:58,  1.26s/it]Eval Llama-3.1-8B:  27%|██▋       | 35/128 [00:25<01:31,  1.02it/s]Eval Llama-3.1-8B:  28%|██▊       | 36/128 [00:26<01:12,  1.27it/s]Eval Llama-3.1-8B:  29%|██▉       | 37/128 [00:26<00:59,  1.53it/s]Eval Llama-3.1-8B:  30%|██▉       | 38/128 [00:26<00:50,  1.80it/s]Eval Llama-3.1-8B:  30%|███       | 39/128 [00:27<00:43,  2.04it/s]Eval Llama-3.1-8B:  31%|███▏      | 40/128 [00:27<00:39,  2.25it/s]Eval Llama-3.1-8B:  32%|███▏      | 41/128 [00:27<00:35,  2.43it/s]Eval Llama-3.1-8B:  33%|███▎      | 42/128 [00:28<00:33,  2.57it/s]Eval Llama-3.1-8B:  34%|███▎      | 43/128 [00:28<00:31,  2.69it/s]Eval Llama-3.1-8B:  34%|███▍      | 44/128 [00:28<00:30,  2.76it/s]Eval Llama-3.1-8B:  35%|███▌      | 45/128 [00:29<00:29,  2.83it/s]Eval Llama-3.1-8B:  36%|███▌      | 46/128 [00:29<00:28,  2.87it/s]Eval Llama-3.1-8B:  37%|███▋      | 47/128 [00:29<00:27,  2.90it/s]Eval Llama-3.1-8B:  38%|███▊      | 48/128 [00:30<00:27,  2.92it/s]Loading SAE for patch layer 16...
+
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s][AFetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 27147.60it/s]
+WARNING:simple_parsing.helpers.serialization.serializable:Dropping extra args {'signed': False}
+Patch hook: blocks.16.hook_resid_post; valid targets: [16, 20, 24, 28, 30, 'final']
+Eval Llama-3.1-8B:  38%|███▊      | 49/128 [00:34<02:08,  1.63s/it]Eval Llama-3.1-8B:  39%|███▉      | 50/128 [00:35<01:36,  1.24s/it]Eval Llama-3.1-8B:  40%|███▉      | 51/128 [00:35<01:14,  1.04it/s]Eval Llama-3.1-8B:  41%|████      | 52/128 [00:35<00:58,  1.30it/s]Eval Llama-3.1-8B:  41%|████▏     | 53/128 [00:35<00:47,  1.57it/s]Eval Llama-3.1-8B:  42%|████▏     | 54/128 [00:36<00:40,  1.85it/s]Eval Llama-3.1-8B:  43%|████▎     | 55/128 [00:36<00:34,  2.11it/s]Eval Llama-3.1-8B:  44%|████▍     | 56/128 [00:36<00:30,  2.34it/s]Eval Llama-3.1-8B:  45%|████▍     | 57/128 [00:37<00:28,  2.53it/s]Eval Llama-3.1-8B:  45%|████▌     | 58/128 [00:37<00:26,  2.69it/s]Eval Llama-3.1-8B:  46%|████▌     | 59/128 [00:37<00:24,  2.80it/s]Eval Llama-3.1-8B:  47%|████▋     | 60/128 [00:38<00:23,  2.89it/s]Eval Llama-3.1-8B:  48%|████▊     | 61/128 [00:38<00:22,  2.96it/s]Eval Llama-3.1-8B:  48%|████▊     | 62/128 [00:38<00:21,  3.01it/s]Eval Llama-3.1-8B:  49%|████▉     | 63/128 [00:39<00:21,  3.05it/s]Eval Llama-3.1-8B:  50%|█████     | 64/128 [00:39<00:20,  3.06it/s]Loading SAE for patch layer 20...
+
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s][AFetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 19021.79it/s]
+WARNING:simple_parsing.helpers.serialization.serializable:Dropping extra args {'signed': False}
+Patch hook: blocks.20.hook_resid_post; valid targets: [20, 24, 28, 30, 'final']
+Eval Llama-3.1-8B:  51%|█████     | 65/128 [00:44<01:41,  1.60s/it]Eval Llama-3.1-8B:  52%|█████▏    | 66/128 [00:44<01:15,  1.21s/it]Eval Llama-3.1-8B:  52%|█████▏    | 67/128 [00:44<00:57,  1.06it/s]Eval Llama-3.1-8B:  53%|█████▎    | 68/128 [00:45<00:44,  1.34it/s]Eval Llama-3.1-8B:  54%|█████▍    | 69/128 [00:45<00:36,  1.62it/s]Eval Llama-3.1-8B:  55%|█████▍    | 70/128 [00:45<00:30,  1.91it/s]Eval Llama-3.1-8B:  55%|█████▌    | 71/128 [00:45<00:26,  2.19it/s]Eval Llama-3.1-8B:  56%|█████▋    | 72/128 [00:46<00:22,  2.44it/s]Eval Llama-3.1-8B:  57%|█████▋    | 73/128 [00:46<00:20,  2.65it/s]Eval Llama-3.1-8B:  58%|█████▊    | 74/128 [00:46<00:19,  2.82it/s]Eval Llama-3.1-8B:  59%|█████▊    | 75/128 [00:47<00:17,  2.95it/s]Eval Llama-3.1-8B:  59%|█████▉    | 76/128 [00:47<00:17,  3.04it/s]Eval Llama-3.1-8B:  60%|██████    | 77/128 [00:47<00:16,  3.12it/s]Eval Llama-3.1-8B:  61%|██████    | 78/128 [00:48<00:15,  3.17it/s]Eval Llama-3.1-8B:  62%|██████▏   | 79/128 [00:48<00:15,  3.20it/s]Eval Llama-3.1-8B:  62%|██████▎   | 80/128 [00:48<00:14,  3.22it/s]Loading SAE for patch layer 24...
+
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s][AFetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 26546.23it/s]
+WARNING:simple_parsing.helpers.serialization.serializable:Dropping extra args {'signed': False}
+Patch hook: blocks.24.hook_resid_post; valid targets: [24, 28, 30, 'final']
+Eval Llama-3.1-8B:  63%|██████▎   | 81/128 [00:53<01:14,  1.59s/it]Eval Llama-3.1-8B:  64%|██████▍   | 82/128 [00:53<00:55,  1.20s/it]Eval Llama-3.1-8B:  65%|██████▍   | 83/128 [00:53<00:41,  1.08it/s]Eval Llama-3.1-8B:  66%|██████▌   | 84/128 [00:54<00:32,  1.37it/s]Eval Llama-3.1-8B:  66%|██████▋   | 85/128 [00:54<00:25,  1.67it/s]Eval Llama-3.1-8B:  67%|██████▋   | 86/128 [00:54<00:21,  1.98it/s]Eval Llama-3.1-8B:  68%|██████▊   | 87/128 [00:54<00:17,  2.28it/s]Eval Llama-3.1-8B:  69%|██████▉   | 88/128 [00:55<00:15,  2.54it/s]Eval Llama-3.1-8B:  70%|██████▉   | 89/128 [00:55<00:14,  2.77it/s]Eval Llama-3.1-8B:  70%|███████   | 90/128 [00:55<00:12,  2.95it/s]Eval Llama-3.1-8B:  71%|███████   | 91/128 [00:56<00:11,  3.09it/s]Eval Llama-3.1-8B:  72%|███████▏  | 92/128 [00:56<00:11,  3.19it/s]Eval Llama-3.1-8B:  73%|███████▎  | 93/128 [00:56<00:10,  3.27it/s]Eval Llama-3.1-8B:  73%|███████▎  | 94/128 [00:56<00:10,  3.33it/s]Eval Llama-3.1-8B:  74%|███████▍  | 95/128 [00:57<00:09,  3.38it/s]Eval Llama-3.1-8B:  75%|███████▌  | 96/128 [00:57<00:09,  3.41it/s]Loading SAE for patch layer 28...
+
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s][AFetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 21845.33it/s]
+WARNING:simple_parsing.helpers.serialization.serializable:Dropping extra args {'signed': False}
+Patch hook: blocks.28.hook_resid_post; valid targets: [28, 30, 'final']
+Eval Llama-3.1-8B:  76%|███████▌  | 97/128 [01:02<00:48,  1.57s/it]Eval Llama-3.1-8B:  77%|███████▋  | 98/128 [01:02<00:35,  1.18s/it]Eval Llama-3.1-8B:  77%|███████▋  | 99/128 [01:02<00:26,  1.10it/s]Eval Llama-3.1-8B:  78%|███████▊  | 100/128 [01:02<00:20,  1.39it/s]Eval Llama-3.1-8B:  79%|███████▉  | 101/128 [01:03<00:15,  1.71it/s]Eval Llama-3.1-8B:  80%|███████▉  | 102/128 [01:03<00:12,  2.04it/s]Eval Llama-3.1-8B:  80%|████████  | 103/128 [01:03<00:10,  2.36it/s]Eval Llama-3.1-8B:  81%|████████▏ | 104/128 [01:03<00:09,  2.64it/s]Eval Llama-3.1-8B:  82%|████████▏ | 105/128 [01:04<00:07,  2.90it/s]Eval Llama-3.1-8B:  83%|████████▎ | 106/128 [01:04<00:07,  3.10it/s]Eval Llama-3.1-8B:  84%|████████▎ | 107/128 [01:04<00:06,  3.25it/s]Eval Llama-3.1-8B:  84%|████████▍ | 108/128 [01:05<00:05,  3.35it/s]Eval Llama-3.1-8B:  85%|████████▌ | 109/128 [01:05<00:05,  3.41it/s]Eval Llama-3.1-8B:  86%|████████▌ | 110/128 [01:05<00:05,  3.48it/s]Eval Llama-3.1-8B:  87%|████████▋ | 111/128 [01:05<00:04,  3.55it/s]Eval Llama-3.1-8B:  88%|████████▊ | 112/128 [01:06<00:04,  3.60it/s]Loading SAE for patch layer 30...
+
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s][AFetching 2 files: 100%|██████████| 2/2 [00:00<00:00, 19972.88it/s]
+WARNING:simple_parsing.helpers.serialization.serializable:Dropping extra args {'signed': False}
+Patch hook: blocks.30.hook_resid_post; valid targets: [30, 'final']
+Eval Llama-3.1-8B:  88%|████████▊ | 113/128 [01:10<00:23,  1.56s/it]Eval Llama-3.1-8B:  89%|████████▉ | 114/128 [01:10<00:16,  1.17s/it]Eval Llama-3.1-8B:  90%|████████▉ | 115/128 [01:11<00:11,  1.12it/s]Eval Llama-3.1-8B:  91%|█████████ | 116/128 [01:11<00:08,  1.43it/s]Eval Llama-3.1-8B:  91%|█████████▏| 117/128 [01:11<00:06,  1.77it/s]Eval Llama-3.1-8B:  92%|█████████▏| 118/128 [01:11<00:04,  2.11it/s]Eval Llama-3.1-8B:  93%|█████████▎| 119/128 [01:12<00:03,  2.46it/s]Eval Llama-3.1-8B:  94%|█████████▍| 120/128 [01:12<00:02,  2.77it/s]Eval Llama-3.1-8B:  95%|█████████▍| 121/128 [01:12<00:02,  3.05it/s]Eval Llama-3.1-8B:  95%|█████████▌| 122/128 [01:12<00:01,  3.27it/s]Eval Llama-3.1-8B:  96%|█████████▌| 123/128 [01:13<00:01,  3.46it/s]Eval Llama-3.1-8B:  97%|█████████▋| 124/128 [01:13<00:01,  3.59it/s]Eval Llama-3.1-8B:  98%|█████████▊| 125/128 [01:13<00:00,  3.70it/s]Eval Llama-3.1-8B:  98%|█████████▊| 126/128 [01:13<00:00,  3.77it/s]Eval Llama-3.1-8B:  99%|█████████▉| 127/128 [01:14<00:00,  3.83it/s]Eval Llama-3.1-8B: 100%|██████████| 128/128 [01:14<00:00,  3.83it/s]Eval Llama-3.1-8B: 100%|██████████| 128/128 [01:14<00:00,  1.71it/s]
+Saved ./final_ops_transport/fixed_target_transport_detailed.csv
+Saved ./final_ops_transport/fixed_target_transport_summary.csv
+Saved matrix: ./final_ops_transport/matrices/Llama-3_1-8B_random_matched_norm_kl_bits_matrix.csv
+Saved matrix: ./final_ops_transport/matrices/Llama-3_1-8B_random_matched_norm_norm_l2_matrix.csv
+Saved matrix: ./final_ops_transport/matrices/Llama-3_1-8B_random_matched_norm_cosine_distance_matrix.csv
+Saved matrix: ./final_ops_transport/matrices/Llama-3_1-8B_sae_kl_bits_matrix.csv
+Saved matrix: ./final_ops_transport/matrices/Llama-3_1-8B_sae_norm_l2_matrix.csv
+Saved matrix: ./final_ops_transport/matrices/Llama-3_1-8B_sae_cosine_distance_matrix.csv
+Saved matrix: ./final_ops_transport/matrices/Llama-3_1-8B_sae_over_random_ratio_kl_bits_matrix.csv
+Saved matrix: ./final_ops_transport/matrices/Llama-3_1-8B_sae_over_random_ratio_norm_l2_matrix.csv
+Saved matrix: ./final_ops_transport/matrices/Llama-3_1-8B_sae_over_random_ratio_cosine_distance_matrix.csv
+Saved ./final_ops_transport/figures/Llama-3_1-8B_sae_kl_bits_heatmap.png
+Saved ./final_ops_transport/figures/Llama-3_1-8B_sae_kl_bits_heatmap.pdf
+Saved ./final_ops_transport/figures/Llama-3_1-8B_sae_norm_l2_heatmap.png
+Saved ./final_ops_transport/figures/Llama-3_1-8B_sae_norm_l2_heatmap.pdf
+Saved ./final_ops_transport/figures/Llama-3_1-8B_random_matched_norm_kl_bits_heatmap.png
+Saved ./final_ops_transport/figures/Llama-3_1-8B_random_matched_norm_kl_bits_heatmap.pdf
+Saved ./final_ops_transport/figures/Llama-3_1-8B_random_matched_norm_norm_l2_heatmap.png
+Saved ./final_ops_transport/figures/Llama-3_1-8B_random_matched_norm_norm_l2_heatmap.pdf
+Saved ./final_ops_transport/figures/Llama-3_1-8B_sae_over_random_ratio_kl_bits_heatmap.png
+Saved ./final_ops_transport/figures/Llama-3_1-8B_sae_over_random_ratio_kl_bits_heatmap.pdf
+Saved ./final_ops_transport/figures/Llama-3_1-8B_sae_over_random_ratio_norm_l2_heatmap.png
+Saved ./final_ops_transport/figures/Llama-3_1-8B_sae_over_random_ratio_norm_l2_heatmap.pdf
+Saved ./final_ops_transport/figures/Llama-3_1-8B_fixed_target_horizon_lines.png
+Saved ./final_ops_transport/figures/Llama-3_1-8B_fixed_target_horizon_lines.pdf
+Done.
